@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS wallets (
+    id BIGSERIAL PRIMARY KEY,
+    user_id BIGINT NOT NULL REFERENCES users(id) ON DELETE CASCADE, 
+    name VARCHAR(60) NOT NULL, 
+    type VARCHAR(60) NOT NULL CHECK (TYPE IN ('cash', 'bank', 'ewallet', 'other')),
+    initial_balance DECIMAL(15,2) NOT NULL DEFAULT 0,
+    is_archived BOOLEAN NOT NULL DEFAULT FALSE,
+    created_At TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP, 
+    deleted_At TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_wallets_user ON wallets(user_id)

@@ -1,0 +1,16 @@
+
+
+.authBanner {
+    width: 70%;
+    height: 100%;
+    background-image: url('rainbow-vortex.svg');
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Mengatur posisi konten ke bagian bawah/tengah */
+    padding: 60px;             /* Memberikan jarak agar tidak terlalu mepet tepi */
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+

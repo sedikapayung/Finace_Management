@@ -1,0 +1,7 @@
+# Abaikan file rahasia & log
+**/.env
+**/logs/*.log
+
+# Abaikan folder dependency berat (PHP & JS)
+**/vendor/
+**/node_modules/
